@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png'
+import logo from "../assets/logo.png";
 
 export function Header() {
   return (
@@ -9,7 +9,14 @@ export function Header() {
           aria-label="Rixto Digital"
           className="flex h-10 items-center overflow-hidden"
         >
-          <img src={logo} alt="Rixto Digital" className="h-16 w-auto" />
+          <img
+            src={logo}
+            alt="Rixto Digital"
+            width="132"
+            height="72"
+            decoding="async"
+            className="h-16 w-auto"
+          />
         </a>
 
         <nav className="hidden items-center gap-8 text-sm text-rixto-muted md:flex">

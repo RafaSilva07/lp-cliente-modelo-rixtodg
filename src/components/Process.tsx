@@ -4,7 +4,7 @@ export function Process() {
   return (
     <section className="px-5 py-20">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl" data-reveal="left">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-rixto-blue">
             Como funciona
           </p>
@@ -15,9 +15,11 @@ export function Process() {
         </div>
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {processSteps.map((step) => (
+          {processSteps.map((step, index) => (
             <article
               key={step.number}
+              data-reveal={index % 2 === 0 ? "left" : "right"}
+              style={{ transitionDelay: `${120 + index * 80}ms` }}
               className="rounded-3xl border border-white/10 bg-white/[0.04] p-6"
             >
               <span className="text-4xl font-bold text-rixto-blue/70">

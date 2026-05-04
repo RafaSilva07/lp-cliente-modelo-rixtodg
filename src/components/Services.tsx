@@ -5,7 +5,7 @@ export function Services() {
     <section id="servicos" className="px-5 py-20">
       <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 md:p-10">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
+          <div data-reveal="left">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-rixto-blue">
               O que será feito
             </p>
@@ -23,12 +23,14 @@ export function Services() {
           </div>
 
           <div className="grid gap-5">
-            {services.map((service) => {
+            {services.map((service, index) => {
               const Icon = service.icon;
 
               return (
                 <article
                   key={service.title}
+                  data-reveal="right"
+                  style={{ transitionDelay: `${120 + index * 90}ms` }}
                   className="rounded-3xl border border-white/10 bg-rixto-dark/60 p-6"
                 >
                   <div className="flex gap-5">

@@ -4,7 +4,7 @@ export function FAQ() {
   return (
     <section id="faq" className="px-5 py-20">
       <div className="mx-auto max-w-4xl">
-        <div className="text-center">
+        <div className="text-center" data-reveal="left">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-rixto-blue">
             Dúvidas frequentes
           </p>
@@ -15,10 +15,12 @@ export function FAQ() {
         </div>
 
         <div className="mt-12 space-y-4">
-          {faqs.map((faq) => (
+          {faqs.map((faq, index) => (
             <details
               key={faq.question}
-              className="group rounded-2xl border border-white/10 bg-white/[0.04] p-6"
+              data-reveal={index % 2 === 0 ? "left" : "right"}
+              style={{ transitionDelay: `${120 + index * 80}ms` }}
+              className="group rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-rixto-blue/30 hover:bg-white/[0.06]"
             >
               <summary className="cursor-pointer list-none text-lg font-semibold text-white">
                 <div className="flex items-center justify-between gap-4">

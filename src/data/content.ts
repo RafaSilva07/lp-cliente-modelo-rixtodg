@@ -1,4 +1,3 @@
-// Aqui ficarao os textos e dados da landing page.
 import {
   BadgeCheck,
   BarChart3,

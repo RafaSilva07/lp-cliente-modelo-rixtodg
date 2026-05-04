@@ -4,7 +4,7 @@ export function ModelClients() {
   return (
     <section className="px-5 py-20">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2">
-        <div>
+        <div data-reveal="left">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-rixto-blue">
             Clientes modelo
           </p>
@@ -27,7 +27,11 @@ export function ModelClients() {
           </p>
         </div>
 
-        <div className="rounded-[2rem] border border-rixto-blue/20 bg-rixto-blue/10 p-6 md:p-8">
+        <div
+          data-reveal="right"
+          style={{ transitionDelay: "120ms" }}
+          className="rounded-[2rem] border border-rixto-blue/20 bg-rixto-blue/10 p-6 md:p-8"
+        >
           <h3 className="text-2xl font-bold text-white">
             Benefícios para os primeiros clientes
           </h3>
@@ -39,8 +43,13 @@ export function ModelClients() {
               "Possibilidade de manter descontos em próximos serviços.",
               "Chance de virar parceiro da Rixto Digital desde o início.",
               "Projeto pensado para transmitir mais profissionalismo e confiança.",
-            ].map((item) => (
-              <div key={item} className="flex gap-3">
+            ].map((item, index) => (
+              <div
+                key={item}
+                data-reveal="right"
+                style={{ transitionDelay: `${180 + index * 70}ms` }}
+                className="flex gap-3"
+              >
                 <CheckCircle2 className="mt-1 text-rixto-blue" size={20} />
                 <p className="leading-7 text-rixto-muted">{item}</p>
               </div>

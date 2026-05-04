@@ -7,6 +7,7 @@ import { Hero } from "./components/Hero";
 import { ModelClients } from "./components/ModelClients";
 import { Offer } from "./components/Offer";
 import { Process } from "./components/Process";
+import { SectionReveal } from "./components/SectionReveal";
 import { Services } from "./components/Services";
 
 function App() {
@@ -15,13 +16,27 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Benefits />
-        <Services />
-        <ModelClients />
-        <Process />
-        <Offer />
-        <FAQ />
-        <CTA />
+        <SectionReveal>
+          <Benefits />
+        </SectionReveal>
+        <SectionReveal>
+          <Services />
+        </SectionReveal>
+        <SectionReveal>
+          <ModelClients />
+        </SectionReveal>
+        <SectionReveal>
+          <Process />
+        </SectionReveal>
+        <SectionReveal>
+          <Offer />
+        </SectionReveal>
+        <SectionReveal>
+          <FAQ />
+        </SectionReveal>
+        <SectionReveal>
+          <CTA />
+        </SectionReveal>
       </main>
       <Footer />
     </>

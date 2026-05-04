@@ -13,24 +13,33 @@ export function Hero() {
       </div>
 
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-        <div>
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-rixto-blue/30 bg-white/5 px-4 py-2 text-sm text-rixto-blueSoft">
+        <div className="min-w-0">
+          <div className="hero-reveal hero-reveal-left mb-6 inline-flex items-center gap-2 rounded-full border border-rixto-blue/30 bg-white/5 px-4 py-2 text-sm text-rixto-blueSoft">
             <CheckCircle2 size={16} />
             Seleção especial para os primeiros clientes modelo
           </div>
 
-          <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl">
+          <h1
+            className="hero-reveal hero-reveal-left max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl"
+            style={{ animationDelay: "80ms" }}
+          >
             Sua empresa com mais presença, credibilidade e chances de atrair
             novos clientes.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-rixto-muted">
+          <p
+            className="hero-reveal hero-reveal-left mt-6 max-w-2xl text-lg leading-8 text-rixto-muted"
+            style={{ animationDelay: "160ms" }}
+          >
             Estamos selecionando os primeiros clientes modelo da Rixto Digital
             para criação de sites profissionais e campanhas de tráfego pago com
             uma condição muito abaixo do valor de mercado.
           </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <div
+            className="hero-reveal hero-reveal-left mt-8 flex flex-col gap-4 sm:flex-row"
+            style={{ animationDelay: "240ms" }}
+          >
             <a
               href="#contato"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-rixto-blue px-7 py-4 font-semibold text-rixto-dark shadow-glow transition hover:bg-rixto-blueSoft"
@@ -48,13 +57,14 @@ export function Hero() {
           </div>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            {highlights.map((item) => {
+            {highlights.map((item, index) => {
               const Icon = item.icon;
 
               return (
                 <div
                   key={item.text}
-                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-4"
+                  className="hero-reveal hero-reveal-left rounded-2xl border border-white/10 bg-white/[0.04] p-4"
+                  style={{ animationDelay: `${320 + index * 70}ms` }}
                 >
                   <Icon className="mb-3 text-rixto-blue" size={22} />
                   <p className="text-sm leading-6 text-rixto-muted">
@@ -66,7 +76,10 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 shadow-2xl backdrop-blur">
+        <div
+          className="hero-reveal hero-reveal-right rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 shadow-2xl backdrop-blur"
+          style={{ animationDelay: "220ms" }}
+        >
           <div className="rounded-[1.5rem] border border-rixto-blue/20 bg-rixto-dark/80 p-6">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-rixto-blue">
               Oferta inicial
@@ -88,8 +101,12 @@ export function Hero() {
                 "Estratégia inicial de tráfego pago",
                 "Condição especial abaixo do mercado",
                 "Possibilidade de descontos em serviços futuros",
-              ].map((text) => (
-                <div key={text} className="flex gap-3">
+              ].map((text, index) => (
+                <div
+                  key={text}
+                  className="hero-reveal hero-reveal-right flex gap-3"
+                  style={{ animationDelay: `${380 + index * 65}ms` }}
+                >
                   <CheckCircle2 className="mt-1 text-rixto-blue" size={18} />
                   <span className="text-rixto-muted">{text}</span>
                 </div>

@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 const whatsappNumber = "5564993322259";
 
 const message = encodeURIComponent(
-  "Olá! Tenho interesse em ser cliente modelo da Rixto Digital e queria entender melhor a condição especial."
+  "Olá! Tenho interesse em ser cliente modelo da Rixto Digital e queria entender melhor a condição especial.",
 );
 
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${message}`;
@@ -11,7 +11,10 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${message}`;
 export function CTA() {
   return (
     <section id="contato" className="px-5 py-24">
-      <div className="mx-auto max-w-5xl rounded-[2rem] border border-rixto-blue/20 bg-white/[0.06] p-8 text-center shadow-glow md:p-12">
+      <div
+        data-reveal="scale"
+        className="mx-auto max-w-5xl rounded-[2rem] border border-rixto-blue/20 bg-white/[0.06] p-8 text-center shadow-glow md:p-12"
+      >
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-rixto-blue">
           Vagas limitadas
         </p>
